@@ -11,7 +11,7 @@ export const PROJECTS = [
     description:
       'Optimized a 50-node TSP using subtour cuts and distance pruning, shrinking the search space by 79%. Built a full data pipeline to compute distances and feasible routes.',
     tags: ['SQL', 'Gurobi', 'Pandas', 'Geopy'],
-    link: './CO370FinalProject.pdf',
+    link: './CO370 Final Project.pdf',
   },
   {
     title: 'Playwright + SolidJS Testing Playground',
