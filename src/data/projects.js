@@ -25,7 +25,7 @@ export const PROJECTS = [
     description:
       'Interactive flashcard-style guide walking through the fundamentals of building a website, covering HTML structure, CSS styling, and JavaScript interactivity.',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://github.com/puiheiyan/guide_to_building_website',
+    link: 'https://puiheiyan.github.io/guide_to_building_website/',
   },
   {
     title: 'Sudoku & KenKen Solver',
