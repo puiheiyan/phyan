@@ -27,13 +27,13 @@ function Hero() {
   return (
     <section id="about" className="hero">
       <div className="hero-content">
-        <p className="hero-greeting">Hi, I'm</p>
+        <p className="hero-greeting">This is a website for</p>
         <h1>Priscilla Yan</h1>
         <p className="hero-tagline">QA Analyst · Pokemon Collector · Developer · Data Analyst</p>
         <p className="hero-bio">
           I'm a Math graduate at the University of Waterloo specializing in Mathematical
           Optimization with a Statistics &amp; Computing Minor. I enjoy building
-          data-driven tools and web applications, with experience spanning QA, automation, machine learning
+          data-driven tools and web applications, with experience spanning QA, automation, machine learning,
           front-end development, and data analysis.
         </p>
         <div className="hero-links">
