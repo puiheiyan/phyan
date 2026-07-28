@@ -1,3 +1,13 @@
+export const EDUCATION = [
+  {
+    role: 'Bachelor of Mathematics',
+    company: 'University of Waterloo',
+    period: 'Sep 2020 – Dec 2025',
+    description:
+      'Mathematical Optimization, Business Specialization, Statistics & Computing Minor, Honours, Co-op.',
+  },
+]
+
 export const EXPERIENCE = [
   {
     role: 'QA Analyst',
@@ -61,13 +71,5 @@ export const EXPERIENCE = [
     period: 'July – Sep 2018',
     description:
       'Independently opened, and operated a retail candy store in a busy tourist destination, managing daily operations and providing excellent customer service.',
-  },
-  {
-    role: 'Bachelor of Mathematics',
-    company: 'University of Waterloo',
-    period: 'Sep 2020 – Dec 2025',
-    description:
-      'Mathematical Optimization, Business Specialization, Statistics & Computing Minor, Honours, Co-op.',
-      // To be added 
   },
 ]
