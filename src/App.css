@@ -251,6 +251,36 @@
   margin: 0 0 8px;
 }
 
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.page-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-title-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.page-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 14px;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
 .social-links-section {
   display: flex;
   flex-direction: column;
@@ -300,6 +330,36 @@
 
 .show-list li strong {
   color: var(--text-h);
+}
+
+.cards-needed-section {
+  padding: 16px 0 0;
+}
+
+.cards-needed-section h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: var(--text-h);
+}
+
+.cards-needed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.cards-needed-list li {
+  font-size: 15px;
+  color: var(--text);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.card-buy-price {
+  color: var(--accent);
 }
 
 .page-description {

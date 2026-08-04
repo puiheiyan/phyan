@@ -1,43 +1,36 @@
 import { SOCIAL_LINKS } from '../data/socials.js'
 import { CARD_SHOWS } from '../data/cardShows.js'
+import { CARD_NEEDS } from '../data/cardNeeds.js'
+import logo from '../assets/pretty_cardboard.PNG'
 
 function PokemonPage() {
-  const favorites = [
-    { name: 'Pikachu', type: 'Electric' },
-    { name: 'Eevee', type: 'Normal' },
-    { name: 'Gengar', type: 'Ghost/Poison' },
-  ]
-
   const socialLinks = SOCIAL_LINKS.filter(({ label }) => label === 'Pretty Cardboard Instagram' || label === 'Colletr')
 
   const today = new Date()
-  const month = today.getMonth()
-  const year = today.getFullYear()
+  const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate())
 
-  const parseShowDate = showDate => {
-    const [monthName, yearString] = showDate.split(' ')
-    const monthIndex = new Date(`${monthName} 1, ${yearString}`).getMonth()
-    const showYear = Number(yearString)
-    return { monthIndex, showYear }
-  }
+  const parseShowDate = showDate => new Date(showDate)
 
   const isPastShow = show => {
-    const { monthIndex, showYear } = parseShowDate(show.date)
-    return showYear < year || (showYear === year && monthIndex < month)
+    const showDate = parseShowDate(show.date)
+    return showDate < todayStart
   }
 
   const pastShows = CARD_SHOWS.filter(isPastShow)
   const upcomingShows = CARD_SHOWS.filter(show => !isPastShow(show))
-
-  const isWeekend = today.getDay() === 0 || today.getDay() === 6
-  const sectionOrder = isWeekend ? ['upcoming', 'past'] : ['past', 'upcoming']
+  const sectionOrder = ['upcoming', 'past']
 
   return (
     <section className="pokemon-page">
       <div className="page-header">
-        <p className="section-label">Pokemon</p>
-        <h1>Pretty Cardboard</h1>
-        <h2>Pokémon TCG Vendor & Collector</h2>
+        <div className="page-title-group">
+          <img src={logo} alt="Pretty Cardboard logo" className="page-logo" />
+          <div className="page-title-copy">
+            <p className="section-label">Pokemon</p>
+            <h1>Pretty Cardboard</h1>
+            <h2>Pokémon TCG Vendor & Collector</h2>
+          </div>
+        </div>
         <p className="page-description">
           Welcome to Pretty Cardboard! I'm a Pokémon TCG vendor and collector based in Ontario, Canada. I trade, buy, sell, and collect Pokémon cards. Browse my collection, explore cards currently available for sale, or reach out if you're looking for something specific.
         </p>
@@ -73,6 +66,20 @@ function PokemonPage() {
             </ul>
           </div>
         ))}
+      </div>
+
+      <div className="cards-needed-section">
+        <h2>Cards I am Looking for</h2>
+        <h3>Mostly buying at around 80% of Collectr. However, please let me know if the prices has gone up.</h3>
+        <ul className="cards-needed-list">
+          {CARD_NEEDS.map(card => (
+            <li key={card.name}>
+              <strong>{card.name}</strong>
+              <span> · {card.set} · {card.setNumber}</span>
+              <span className="card-buy-price"> — Will buy for {card.buyPrice}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

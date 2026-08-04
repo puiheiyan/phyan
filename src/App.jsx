@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { PROJECTS } from './data/projects.js'
+import favicon from './assets/pretty_cardboard.PNG'
 import { EDUCATION, EXPERIENCE } from './data/experience.js'
 import { SOCIAL_LINKS } from './data/socials.js'
 import PokemonPage from './pages/PokemonPage.jsx'
@@ -183,6 +184,20 @@ function App() {
 
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
+
+  useEffect(() => {
+    const link = document.querySelector("link[rel='icon']")
+
+    if (!link) {
+      return
+    }
+
+    if (currentPage === 'pokemon') {
+      link.href = favicon
+    } else {
+      link.href = '/favicon.png'
+    }
+  }, [currentPage])
 
   return (
     <div className="site">
