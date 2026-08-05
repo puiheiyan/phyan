@@ -68,7 +68,7 @@ export const EXPERIENCE = [
   {
     role: 'Candy Shopkeeper',
     company: 'Candy Kitchen',
-    period: 'July – Sep 2018',
+    period: 'July 2018 – Sep 2018',
     description:
       'Independently opened, and operated a retail candy store in a busy tourist destination, managing daily operations and providing excellent customer service.',
   },
