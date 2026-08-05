@@ -34,7 +34,7 @@ export const SOCIAL_LINKS = [
   {
     label: 'Kitkat Instagram',
     displayLabel: 'Instagram',
-    href: 'https://www.instagram.com/pretty_cardboard_/',
+    href: 'https://www.instagram.com/luna_the_kitkat_/',
     variant: 'secondary',
   },
 ]
