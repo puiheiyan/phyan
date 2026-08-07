@@ -71,15 +71,28 @@ function PokemonPage() {
       <div className="cards-needed-section">
         <h2>Cards I am Looking for</h2>
         <h3>Mostly buying at around 80% of Collectr. However, please let me know if the prices has gone up.</h3>
-        <ul className="cards-needed-list">
+        <div className="cards-needed-grid">
           {CARD_NEEDS.map(card => (
-            <li key={card.name}>
-              <strong>{card.name}</strong>
-              <span> · {card.set} · {card.setNumber}</span>
-              <span className="card-buy-price"> — Will buy for {card.buyPrice}</span>
-            </li>
+            <div key={card.name} className="card-flip-card">
+              <div className="card-flip-inner">
+                <div className="card-flip-front">
+                  <p className="card-flip-label">Card Wanted</p>
+                  <h3>{card.name}</h3>
+                  <p className="card-flip-set">{card.set}</p>
+                  <p className="card-flip-number">{card.setNumber}</p>
+                </div>
+                <div className="card-flip-back">
+                  <p className="card-flip-label">Details</p>
+                  <h3>{card.name}</h3>
+                  <p><strong>Set:</strong> {card.set}</p>
+                  <p><strong>Set Number:</strong> {card.setNumber}</p>
+                  <p><strong>Price:</strong> {card.buyPrice}</p>
+                  <p><strong>Amount:</strong> {card.amount ?? '1'}</p>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )

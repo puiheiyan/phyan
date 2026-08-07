@@ -342,24 +342,80 @@
   color: var(--text-h);
 }
 
-.cards-needed-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.cards-needed-grid {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
 }
 
-.cards-needed-list li {
-  font-size: 15px;
-  color: var(--text);
+.card-flip-card {
+  perspective: 1000px;
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.card-flip-card:hover .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-front,
+.card-flip-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 20px;
+  backface-visibility: hidden;
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
 }
 
-.card-buy-price {
+.card-flip-front {
+  background: linear-gradient(135deg, var(--accent-bg), var(--bg));
+}
+
+.card-flip-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, var(--bg), var(--accent-bg));
+}
+
+.card-flip-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--accent);
+  margin: 0;
+}
+
+.card-flip-front h3,
+.card-flip-back h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-h);
+}
+
+.card-flip-set,
+.card-flip-number,
+.card-flip-back p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.card-flip-back strong {
+  color: var(--text-h);
 }
 
 .page-description {
