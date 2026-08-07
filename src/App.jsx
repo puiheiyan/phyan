@@ -201,7 +201,7 @@ function App() {
     if (currentPage === 'pokemon') {
       link.href = favicon
     } else {
-      link.href = '/favicon.png'
+      link.href = '/favicon.svg'
     }
   }, [currentPage])
 
