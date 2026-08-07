@@ -26,7 +26,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 32px;
+  gap: 20px;
 }
 
 .nav-links a {
@@ -120,7 +120,7 @@
 
 /* Sections */
 .section {
-  padding: 80px 40px;
+  padding: 48px 20px 20px;
   border-top: 1px solid var(--border);
 }
 
@@ -130,7 +130,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  margin: 0 0 40px;
+  margin: 0 0 10px;
 }
 
 /* Projects */
@@ -368,6 +368,89 @@
   color: var(--text);
   margin: 0;
   max-width: 800px;
+}
+
+.life-achievements-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.timeline-line {
+  position: relative;
+  min-height: 320px;
+  margin-top: 20px;
+  padding: 24px 0;
+}
+
+.timeline-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: var(--border);
+  transform: translateY(-50%);
+}
+
+.timeline-point {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent);
+  cursor: pointer;
+}
+
+.timeline-card {
+  position: absolute;
+  top: -8px;
+  left: 24px;
+  min-width: 220px;
+  max-width: 280px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.timeline-point:hover .timeline-card {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.timeline-date {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.timeline-card h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--text-h);
+}
+
+.timeline-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
 }
 
 .pokemon-grid {

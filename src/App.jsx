@@ -6,12 +6,12 @@ import { EDUCATION, EXPERIENCE } from './data/experience.js'
 import { SOCIAL_LINKS } from './data/socials.js'
 import PokemonPage from './pages/PokemonPage.jsx'
 import CatPage from './pages/CatPage.jsx'
+import LifeAchievementsPage from './pages/LifeAchievementsPage.jsx'
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Experience', href: '#education' },
   { label: 'Pokemon', href: '#pokemon' },
+  { label: 'Life Achievements', href: '#life-achievements' },
   { label: 'My Cat', href: '#cats' },
 ]
 
@@ -161,6 +161,10 @@ function App() {
       return 'pokemon'
     }
 
+    if (window.location.hash === '#life-achievements') {
+      return 'life-achievements'
+    }
+
     if (window.location.hash === '#cats') {
       return 'cats'
     }
@@ -172,6 +176,8 @@ function App() {
     const handleHashChange = () => {
       if (window.location.hash === '#pokemon') {
         setCurrentPage('pokemon')
+      } else if (window.location.hash === '#life-achievements') {
+        setCurrentPage('life-achievements')
       } else if (window.location.hash === '#cats') {
         setCurrentPage('cats')
       } else {
@@ -205,6 +211,10 @@ function App() {
       {currentPage === 'pokemon' ? (
         <main>
           <PokemonPage />
+        </main>
+      ) : currentPage === 'life-achievements' ? (
+        <main>
+          <LifeAchievementsPage />
         </main>
       ) : currentPage === 'cats' ? (
         <main>
