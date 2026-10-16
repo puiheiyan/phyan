@@ -11,7 +11,7 @@ import LifeAchievementsPage from './pages/LifeAchievementsPage.jsx'
 const NAV_LINKS = [
   { label: 'Experience', href: '#education' },
   { label: 'Pokemon', href: '#pokemon' },
-  { label: 'Life Achievements', href: '#life-achievements' },
+  // { label: 'Life Achievements', href: '#life-achievements' },
   { label: 'My Cat', href: '#cats' },
 ]
 
