@@ -10,9 +10,16 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
   {
+    role: 'Test Engineer',
+    company: 'Zoox',
+    period: 'Sep 2026 – Present',
+    description:
+      'Test release tickets on staging, write manual and Playwright test cases in TestRail, and file bugs in Jira for Zoox\'s vehicle diagnostics and repair tool Baseline.',
+  },
+  {
     role: 'QA Analyst',
     company: 'Miipe Quality Solutions',
-    period: 'Dec 2025 – Present',
+    period: 'Dec 2025 – Aug 2026',
     description:
       'Experience in testing across 3+ agile project lifecycles. Designed and executed 200+ test cases per project with Jira covering functional, regression, integration, and UAT scenarios. Performed CSV data validation using Excel and Python scripts.',
   },
