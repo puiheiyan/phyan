@@ -70,7 +70,7 @@ function PokemonPage() {
 
       <div className="cards-needed-section">
         <h2>Cards I am Looking for</h2>
-        <h3>Mostly buying at around 80% of Collectr. However, please let me know if the prices has gone up.</h3>
+        <p>Mostly buying at around 80% of Collectr. However, please let me know if the prices has gone up.</p>
         <div className="cards-needed-grid">
           {CARD_NEEDS.map(card => (
             <div key={card.name} className="card-flip-card">

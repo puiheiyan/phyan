@@ -9,5 +9,10 @@ export const CARD_SHOWS = [
     date: 'August 22, 2026',
     location: 'Mississauga, ON',
   },
+  {
+    name: 'Collector Verse Expo',
+    date: 'October 25, 2026',
+    location: 'Oakville, ON',
+  },
 
 ]
